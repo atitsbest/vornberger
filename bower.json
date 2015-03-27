@@ -8,9 +8,8 @@
         "components"
     ],
     "dependencies": {
-        "jquery": "*",
+        "jquery": "1.11.2",
         "underscore": "~1.8",
-        "owl.carousel": "*",
         "bootstrap-less": "*",
         "modernizr": "*"
     },
