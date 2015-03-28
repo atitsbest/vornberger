@@ -1,5 +1,11 @@
 exports.config =
     # See http://brunch.io/#documentation for docs.
+    conventions:
+        assets:  /^app\/assets\//
+    modules:
+        definition: false
+        wrapper: false
+
     files:
         javascripts:
             joinTo:
@@ -9,7 +15,8 @@ exports.config =
                 before: [
                     'bower_components/modernizr/modernizr.js',
                     'bower_components/jquery/dist/jquery.js',
-                    'bower_components/underscore/underscore.js'
+                    'bower_components/underscore/underscore.js',
+                    'bower_components/bootstrap-less/js/affix.js'
                ]
 
         stylesheets:
