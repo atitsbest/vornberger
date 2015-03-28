@@ -102,7 +102,7 @@ body {
 
             &.invert {
                 .container {
-                    background: #111;
+                    background: #000;
                     padding-top: 3rem;
 
                     h2, h3 {
@@ -121,8 +121,14 @@ body {
 
         #hero {
             .heros {
-                img {
-                    width: 100%;
+                .item {
+                    img {
+                        height: 300px;
+
+                        @media (min-width: @screen-sm-min) {
+                            height: 400px;
+                        }
+                    }
                 }
             }
         }
@@ -143,7 +149,25 @@ body {
 
         #kontaktlinsen {
             .container {
-                padding-bottom: 3rem;
+                border-bottom: 1px solid #222;
+                background: #000 url('../img/kontaktlinsen.png') no-repeat 25%;
+
+                padding-top: 0;
+
+
+                @media (min-width: @screen-sm-min) {
+                    background: #000 url('../img/kontaktlinsen.png') no-repeat 100%;
+                }
+
+                .row {
+                    background-color: rgba(50, 150, 250, .5);
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+
+                    p {
+                        color: rgba(255,255,255,.7);
+                    }
+                }
             }
         }
 
