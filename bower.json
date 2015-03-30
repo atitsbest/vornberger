@@ -10,7 +10,6 @@
     "dependencies": {
         "jquery": "1.11.2",
         "underscore": "~1.8",
-        "modernizr": "*",
         "bootstrap-less": "*"
     },
     "overrides": {}

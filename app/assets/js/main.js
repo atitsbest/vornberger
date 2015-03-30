@@ -9,20 +9,22 @@ $(function() {
             pos = $scroll.position();
 
         $(window).scroll(function() {
-            // HTML5 proves useful for helping with creating JS functions!
-            // also, negative value because we're scrolling upwards
-            var scrollTop = $window.scrollTop(),
-                viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
-                speed = (scrollTop+viewportHeight)-pos.top > 0 ? $scroll.data('speed') : 1,
-                yPos = -(scrollTop-pos.top) / speed;
+            if (Modernizr.mq('(min-width: 768px)')) {
+                // HTML5 proves useful for helping with creating JS functions!
+                // also, negative value because we're scrolling upwards
+                var scrollTop = $window.scrollTop(),
+                    speed = $scroll.data('speed'),
+                    yPos = -(scrollTop-pos.top) / speed,
+                    xPos = $scroll.data('pos-x');
 
-            // background position
-            var coords = '50% '+ yPos + 'px';
+                // background position
+                var coords = xPos + ' '+ yPos + 'px';
 
-            console.log((scrollTop+viewportHeight)-pos.top+ ' => ' + speed);
+                // console.log((scrollTop+viewportHeight)-pos.top+ ' => ' + speed);
 
-            // move the background
-            $scroll.css({ backgroundPosition: coords });
+                // move the background
+                $scroll.css({ backgroundPosition: coords });
+            }
         }); // end window scroll
     });  // end section function
 
@@ -32,6 +34,7 @@ $(function() {
 
     $("#brillen .brands").owlCarousel({
         autoPlay: 5000, //Set AutoPlay to 3 seconds
+        pagination: false,
         itemScaleUp: true,
         items : 7,
         itemsMobile: [479,2],
