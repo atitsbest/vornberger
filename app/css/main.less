@@ -168,15 +168,37 @@ body {
         #schmuck {
             .container {
                 border-bottom: 1px solid #222;
-                background: #fff url('../img/schmuck-01.jpg') no-repeat 25%;
+                background: #fff url('../img/schmuck-01.jpg') 50% 0 fixed;
+                background-repeat: no-repeat;
                 background-position: left;
                 min-height: 400px;
+                height: auto;
+                position: relative;
 
                 padding-top: 0;
 
 
                 @media (min-width: @screen-sm-min) {
-                    background: #fff url('../img/schmuck-01.jpg') no-repeat 100%;
+                    background: #fff url('../img/schmuck-01.jpg') 50% 0 fixed;
+                }
+
+                .row {
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+
+        #uhren {
+            .container {
+                border-bottom: 1px solid #222;
+                background: #000 url('../img/uhr-01.jpg') no-repeat 25%;
+
+                padding-top: 0;
+
+
+                @media (min-width: @screen-sm-min) {
+                    background: #000 url('../img/uhr-01.jpg') no-repeat 100%;
                 }
 
                 .row {
