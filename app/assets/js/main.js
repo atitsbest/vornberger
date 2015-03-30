@@ -3,17 +3,23 @@ $(function() {
     // cache the window object
     $window = $(window);
 
-    $('.container[data-type="background"]').each(function(){
+    $('div[data-type="background"]').each(function(){
         // declare the variable to affect the defined data-type
-        var $scroll = $(this);
+        var $scroll = $(this),
+            pos = $scroll.position();
 
         $(window).scroll(function() {
             // HTML5 proves useful for helping with creating JS functions!
             // also, negative value because we're scrolling upwards
-            var yPos = -($window.scrollTop() / $scroll.data('speed'));
+            var scrollTop = $window.scrollTop(),
+                viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
+                speed = (scrollTop+viewportHeight)-pos.top > 0 ? $scroll.data('speed') : 1,
+                yPos = -(scrollTop-pos.top) / speed;
 
             // background position
             var coords = '50% '+ yPos + 'px';
+
+            console.log((scrollTop+viewportHeight)-pos.top+ ' => ' + speed);
 
             // move the background
             $scroll.css({ backgroundPosition: coords });
