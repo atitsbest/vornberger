@@ -5,7 +5,7 @@ $(function() {
 
     $("#brillen .brands").owlCarousel({
         autoPlay: 5000, //Set AutoPlay to 3 seconds
-
+        itemScaleUp: true,
         items : 7,
         itemsMobile: [479,2],
         itemsTablet: [768,3],

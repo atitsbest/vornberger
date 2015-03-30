@@ -6,19 +6,21 @@
 body {
     background: #222;
 
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
 
     .wrap {
 
         h2,h3 {
             font-weight: normal;
-            font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
             // letter-spacing: 0.01em;
         }
 
         p {
             color: #333;
-            // line-height: 1.8em;
+            line-height: 24px;
             font-weight: normal;
             // font-size: 20px;
 
@@ -48,6 +50,7 @@ body {
             right: 0;
             margin-top: -50px;
             transition: all 1s ease;
+            z-index: @zindex-navbar-fixed;
 
             &.affix {
                 position: fixed;
@@ -112,7 +115,7 @@ body {
                     }
 
                     p {
-                        line-height: 1.8em;
+                        line-height: 24px;
                         color: #a5a5a5;
                     }
                 }
@@ -158,6 +161,27 @@ body {
                     p {
                         color: rgba(255,255,255,.7);
                     }
+                }
+            }
+        }
+
+        #schmuck {
+            .container {
+                border-bottom: 1px solid #222;
+                background: #fff url('../img/schmuck-01.jpg') no-repeat 25%;
+                background-position: left;
+                min-height: 400px;
+
+                padding-top: 0;
+
+
+                @media (min-width: @screen-sm-min) {
+                    background: #fff url('../img/schmuck-01.jpg') no-repeat 100%;
+                }
+
+                .row {
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
                 }
             }
         }
