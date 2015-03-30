@@ -1,10 +1,6 @@
 $(function() {
-    $("#hero .heros").owlCarousel({
-        autoPlay: 9000,
-
-        singleItem: true,
-        slideSpeed: 500,
-        pagination: false
+    $("#hero .heros").responsiveSlides({
+        auto: true
     });
 
     $("#brillen .brands").owlCarousel({
