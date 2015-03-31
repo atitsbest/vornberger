@@ -13,10 +13,9 @@ body {
     .wrap {
 
         h2,h3 {
-            font-weight: 700;
+            font-weight: 900;
             font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
-            // letter-spacing: 0.01em;
         }
 
         p {
@@ -50,7 +49,7 @@ body {
             left: 0;
             right: 0;
             margin-top: -50px;
-            transition: all 1s ease;
+            transition: all 500ms ease;
             z-index: @zindex-navbar-fixed;
 
             &.affix {
@@ -147,12 +146,29 @@ body {
             .container {
                 border-bottom: 1px solid #222;
 
-                .brands {
-                    background: #fff;
-                    border-bottom: 1px solid #222;
-                    margin-bottom: 1em;
+                h2 {
+                    font-size: 64px;
+                    position: absolute;
+                    margin-top: -56px;
+                    color: #f5f3f2;
+                    letter-spacing: -0.09em;
+                    text-shadow: 1px -1px rgba(0,0,0,.2);
                 }
 
+                p {
+                    margin-top: 30px;
+                }
+
+                @media (min-width: @screen-sm-min) {
+                    h2 {
+                        font-size: 96px;
+                        margin-top: -85px;
+                    }
+
+                    p {
+                        margin-top: 40px;
+                    }
+                }
             }
         }
 
@@ -161,12 +177,32 @@ body {
                 border-bottom: 1px solid #222;
                 background: #000 url('../img/kontaktlinsen.png') 100%;
                 background-repeat: no-repeat;
-
                 padding-top: 0;
+
+                h2 {
+                    font-size: 64px;
+                    position: absolute;
+                    margin-top: -59px;
+                    color: #f5f3f2;
+                    letter-spacing: -0.09em;
+                }
+
+                p {
+                    margin-top: 30px;
+                }
 
                 @media (min-width: @screen-sm-min) {
                     background: #000 url('../img/kontaktlinsen.png') 100%;
                     background-repeat: no-repeat;
+
+                    h2 {
+                        font-size: 96px;
+                        margin-top: -65px;
+                    }
+
+                    p {
+                        margin-top: 40px;
+                    }
                 }
 
                 .row {
@@ -177,7 +213,7 @@ body {
                     p {
                         color: rgba(255,255,255,.7);
                         background: rgba(0,0,0,.2);
-                        padding: 10px;
+                        padding: 10px 4px;
                     }
                 }
             }
@@ -191,13 +227,33 @@ body {
                 background-position: left;
                 min-height: 300px;
                 position: relative;
-
                 padding-top: 0;
+
+                h2 {
+                    color: #000;
+                    font-size: 64px;
+                    position: absolute;
+                    margin-top: -59px;
+                    letter-spacing: -0.09em;
+                }
+
+                p {
+                    margin-top: 30px;
+                }
 
 
                 @media (min-width: @screen-sm-min) {
                     background: #fff url('../img/schmuck-01a.png') 0 0 fixed;
                     background-repeat: no-repeat;
+
+                    h2 {
+                        font-size: 96px;
+                        margin-top: -64px;
+                    }
+
+                    p {
+                        margin-top: 40px;
+                    }
                 }
 
                 .row {
@@ -223,9 +279,31 @@ body {
                 background-repeat: no-repeat;
                 padding-top: 0;
 
+                h2 {
+                    color: #fff;
+                    font-size: 64px;
+                    position: absolute;
+                    margin-top: -59px;
+                    letter-spacing: -0.09em;
+                    text-shadow: 1px -1px rgba(0,0,0,.2);
+                }
+
+                p {
+                    margin-top: 30px;
+                }
+
                 @media (min-width: @screen-sm-min) {
                     background: #222 url('../img/uhr-02.png') 75% 0 fixed;
                     background-repeat: no-repeat;
+
+                    h2 {
+                        font-size: 96px;
+                        margin-top: -65px;
+                    }
+
+                    p {
+                        margin-top: 50px;
+                    }
                 }
 
                 .row {
@@ -280,6 +358,16 @@ body {
                 padding-bottom: 3em;
                 background: #222;
                 color: #fff;
+                text-align: center;
+
+                .brands {
+                    border-bottom: 1px solid #222;
+                    margin-bottom: 1em;
+
+                    img {
+                        opacity: .2;
+                    }
+                }
             }
         }
 

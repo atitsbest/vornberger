@@ -32,7 +32,7 @@ $(function() {
         auto: true
     });
 
-    $("#brillen .brands").owlCarousel({
+    $("footer .brands").owlCarousel({
         autoPlay: 5000, //Set AutoPlay to 3 seconds
         pagination: false,
         itemScaleUp: true,
