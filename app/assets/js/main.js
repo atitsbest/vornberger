@@ -43,4 +43,27 @@ $(function() {
         itemsDesktop: false
 
     });
+
+    google.maps.event.addDomListener(window, 'load', function initialize() {
+        var latlng = new google.maps.LatLng(50.001058,12.083484);
+
+        var mapOptions = {
+            center: latlng,
+            scrollwheel: false,
+            streetViewControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            panControl: false,
+            zoom: 16
+        };
+
+        var marker = new google.maps.Marker({
+            position: latlng,
+            url: '/',
+            animation: google.maps.Animation.DROP
+        });
+
+        var map = new google.maps.Map($('#kontakt .col-xs-12')[0], mapOptions);
+        marker.setMap(map);
+    });
 });

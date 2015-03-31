@@ -170,7 +170,7 @@ body {
                 }
 
                 .row {
-                    background-color: rgba(50, 150, 250, .5);
+                    // background-color: rgba(50, 150, 250, .5);
                     padding-top: 3em;
                     padding-bottom: 3em;
 
@@ -232,10 +232,11 @@ body {
                     padding-top: 3em;
                     padding-bottom: 3em;
                     height: 400px;
-                    // background: rgba(0,0,0,.8);
                     
                     p {
                         padding-bottom: 3em;
+                        background: rgba(50,50,50,.9);
+                        padding: 10px;
                     }
                 }
             }
@@ -243,6 +244,33 @@ body {
 
         #kontakt {
             .container {
+                .col-xs-12 {
+                    min-height: 300px;
+                }
+
+                .text {
+                    padding-top: 20px;
+                    background-color: rgba(50, 150, 250, .7);
+                    height: 300px;
+
+                    h2,h3 {
+                        color: rgba(255,255,255,.9);
+                    }
+
+                    p {
+                        color: #333;
+
+                        &.kontakt {
+                            padding-bottom: 15px;
+                        }
+
+                        .tag {
+                            display: inline-block;
+                            width: 3em;
+                            text-align: right;
+                        }
+                    }
+                }
             }
         }
 
