@@ -1,9 +1,46 @@
 @import url('../../bower_components/bootstrap-less/less/variables.less');
 
 /* ==========================================================================
-   Navigations-Menu
+   Mixins
+   ========================================================================== */
+.section_container {
+    overflow: hidden;
+
+    h2 {
+        font-size: 48px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: -59px;
+        color: #f5f3f2;
+        letter-spacing: -0.05em;
+        text-align: center;
+    }
+
+    p {
+        margin-top: 30px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        h2 {
+            font-size: 72px;
+            margin-top: -62px;
+            text-align: left;
+        }
+
+        p {
+            margin-top: 40px;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Styles
    ========================================================================== */
 body {
+
+
     background: #222;
 
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -16,6 +53,10 @@ body {
             font-weight: 900;
             font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         p {
@@ -58,7 +99,7 @@ body {
                 z-index: @zindex-navbar-fixed;
 
                 .container {
-                    background-color: rgb(60, 160, 150);
+                    background-color: rgb(60, 160, 150, .8);
                     border-bottom: 1px solid rgb(40, 120, 130);
                 }
             }
@@ -137,36 +178,55 @@ body {
         #news {
             .container {
                 background: #222;
-                border-bottom: 1px solid #222;
-                padding-bottom: 3em;
+                // border-bottom: 1px solid #222;
+                padding-bottom: 2em;
+
+                a.facebook {
+                    white-space: nowrap;
+                    background: #d8d8d8;
+                    color: #333;
+                    padding: 0 4px;
+                }
+
+                a.btn.btn-default {
+                    background: rgba(60, 160, 150, 1);
+                    border: rgba(60, 160, 150, 8);
+                    color: #fff;
+                    border-radius: 0;
+                    padding: 10px 20px;
+
+                    margin-top: 2em;
+                }
+
             }
         }
 
         #brillen {
             .container {
-                border-bottom: 1px solid #222;
+                // border-bottom: 1px solid #222;
+                .section_container;
 
-                h2 {
-                    font-size: 64px;
-                    position: absolute;
-                    margin-top: -56px;
-                    color: #f5f3f2;
-                    letter-spacing: -0.09em;
-                    text-shadow: 1px -1px rgba(0,0,0,.2);
-                }
+                .head {
+                    position: relative;
 
-                p {
-                    margin-top: 30px;
-                }
-
-                @media (min-width: @screen-sm-min) {
                     h2 {
-                        font-size: 96px;
-                        margin-top: -85px;
+                        color: #f5f3f2;
+                        text-shadow: 1px -1px rgba(0,0,0,.2);
+                        margin-top: -44px;
                     }
 
                     p {
-                        margin-top: 40px;
+                        margin-top: 0;
+                    }
+
+
+                    @media (min-width: @screen-sm-min) {
+                        h2 {
+                            margin-top: -66px;
+                        }
+                        p {
+                            margin-top: 0;
+                        }
                     }
                 }
             }
@@ -174,35 +234,20 @@ body {
 
         #kontaktlinsen {
             .container {
-                border-bottom: 1px solid #222;
+                // border-bottom: 1px solid #222;
                 background: #000 url('../img/kontaktlinsen.png') 100%;
                 background-repeat: no-repeat;
                 padding-top: 0;
 
-                h2 {
-                    font-size: 64px;
-                    position: absolute;
-                    margin-top: -59px;
-                    color: #f5f3f2;
-                    letter-spacing: -0.09em;
-                }
+                .section_container;
 
-                p {
-                    margin-top: 30px;
+                h2 {
+                    letter-spacing: -0.09em;
                 }
 
                 @media (min-width: @screen-sm-min) {
                     background: #000 url('../img/kontaktlinsen.png') 100%;
                     background-repeat: no-repeat;
-
-                    h2 {
-                        font-size: 96px;
-                        margin-top: -65px;
-                    }
-
-                    p {
-                        margin-top: 40px;
-                    }
                 }
 
                 .row {
@@ -221,39 +266,23 @@ body {
 
         #schmuck {
             .container {
-                border-bottom: 1px solid #222;
-                background: #fff url('../img/schmuck-01a.png') 0;
+                // border-bottom: 1px solid #222;
+                background: #fff url('../img/schmuck-01a.png') 0 0 fixed;
                 background-repeat: no-repeat;
                 background-position: left;
                 min-height: 300px;
                 position: relative;
                 padding-top: 0;
 
+                .section_container;
+
                 h2 {
                     color: #000;
-                    font-size: 64px;
-                    position: absolute;
-                    margin-top: -59px;
-                    letter-spacing: -0.09em;
                 }
-
-                p {
-                    margin-top: 30px;
-                }
-
 
                 @media (min-width: @screen-sm-min) {
                     background: #fff url('../img/schmuck-01a.png') 0 0 fixed;
                     background-repeat: no-repeat;
-
-                    h2 {
-                        font-size: 96px;
-                        margin-top: -64px;
-                    }
-
-                    p {
-                        margin-top: 40px;
-                    }
                 }
 
                 .row {
@@ -274,22 +303,16 @@ body {
 
         #uhren {
             .container {
-                border-bottom: 1px solid #222;
+                // border-bottom: 1px solid #222;
                 background: #222 url('../img/uhr-02.png') 0 0 fixed;
                 background-repeat: no-repeat;
                 padding-top: 0;
 
+                .section_container;
+
                 h2 {
                     color: #fff;
-                    font-size: 64px;
-                    position: absolute;
-                    margin-top: -59px;
-                    letter-spacing: -0.09em;
-                    text-shadow: 1px -1px rgba(0,0,0,.2);
-                }
-
-                p {
-                    margin-top: 30px;
+                    text-shadow: 1px 1px rgba(0,0,0,.2);
                 }
 
                 @media (min-width: @screen-sm-min) {
@@ -297,12 +320,7 @@ body {
                     background-repeat: no-repeat;
 
                     h2 {
-                        font-size: 96px;
-                        margin-top: -65px;
-                    }
-
-                    p {
-                        margin-top: 50px;
+                        margin-top: -63px;
                     }
                 }
 
@@ -310,7 +328,7 @@ body {
                     padding-top: 3em;
                     padding-bottom: 3em;
                     height: 400px;
-                    
+
                     p {
                         padding-bottom: 3em;
                         background: rgba(50,50,50,.9);
@@ -322,31 +340,22 @@ body {
 
         #kontakt {
             .container {
+                border: 1px solid #333;
+
                 .col-xs-12 {
                     min-height: 300px;
                 }
 
-                .text {
-                    padding-top: 20px;
-                    background-color: rgba(50, 150, 250, .7);
-                    height: 300px;
+                .section_container;
 
-                    h2,h3 {
-                        color: rgba(255,255,255,.9);
-                    }
+                h2 {
+                    margin-top: -10px;
+                    color: #222;
+                }
 
-                    p {
-                        color: #333;
-
-                        &.kontakt {
-                            padding-bottom: 15px;
-                        }
-
-                        .tag {
-                            display: inline-block;
-                            width: 3em;
-                            text-align: right;
-                        }
+                @media (min-width: @screen-sm-min) {
+                    h2 {
+                        margin-top: -15px;
                     }
                 }
             }
@@ -354,18 +363,92 @@ body {
 
         footer {
             .container {
-                padding-top: 2em;
-                padding-bottom: 3em;
+                text-align: center;
+                border: 1px solid #333;
+
+                @media (min-width: @screen-sm-min) {
+                    text-align: left;
+                }
+
+                padding-top: 1em;
+                padding-bottom: 1em;
+                margin-bottom: 2em;
                 background: #222;
                 color: #fff;
-                text-align: center;
+                font-size: 14px;
+
+                a {
+                    color: #d8d8d8;
+                }
+
+                h4 {
+                    color: #999;
+                    text-transform: uppercase;
+                    margin-top: 30px;
+                }
+
+                p {
+                    color: #666;
+                    line-height: 1.4em;
+
+                    &.facebook {
+                        font-size: 32px;
+                    }
+                }
 
                 .brands {
-                    border-bottom: 1px solid #222;
                     margin-bottom: 1em;
+                    border-right: 1px solid #333;
 
-                    img {
-                        opacity: .2;
+                    .item {
+                        display: inline-block;
+
+                        img {
+                            opacity: .3;
+                            width: 120px;
+                        }
+                    }
+                }
+
+                .shoppinghours {
+                }
+
+                .about {
+                }
+
+
+                .copyright {
+                    padding-top: 30px;
+                    text-align: center;
+                    p {
+                        color: #444;
+                    }
+
+                    .logo {
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+
+                #impressum {
+                    border: 1px solid #333;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+                    text-align: center;
+                    margin: 20px;
+                    padding-bottom: 30px;
+                    display: none;
+
+                    h4 {
+                        margin-top: 30px;
+                    }
+
+                    .btn {
+                        margin-top: 30px;
+                        background: #111;
+                        border-color: #333;
+                        color: #999;
+                        font-weight: bold;
                     }
                 }
             }

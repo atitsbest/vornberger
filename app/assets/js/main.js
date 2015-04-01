@@ -32,17 +32,17 @@ $(function() {
         auto: true
     });
 
-    $("footer .brands").owlCarousel({
-        autoPlay: 5000, //Set AutoPlay to 3 seconds
-        pagination: false,
-        itemScaleUp: true,
-        items : 7,
-        itemsMobile: [479,2],
-        itemsTablet: [768,3],
-        itemsDesktopSmall: [979, 5],
-        itemsDesktop: false
-
-    });
+    // $("footer .brands").owlCarousel({
+    //     autoPlay: 5000, //Set AutoPlay to 3 seconds
+    //     pagination: false,
+    //     itemScaleUp: true,
+    //     items : 7,
+    //     itemsMobile: [479,2],
+    //     itemsTablet: [768,3],
+    //     itemsDesktopSmall: [979, 5],
+    //     itemsDesktop: false
+    //
+    // });
 
     google.maps.event.addDomListener(window, 'load', function initialize() {
         var latlng = new google.maps.LatLng(50.001058,12.083484);
