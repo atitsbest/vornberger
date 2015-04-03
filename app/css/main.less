@@ -1,6 +1,12 @@
 @import url('../../bower_components/bootstrap-less/less/variables.less');
 
 /* ==========================================================================
+   Variables
+   ========================================================================== */
+@vornberger-color: rgb(60, 160, 150);
+@vornberger-background: rgba(60, 160, 150, .85);
+
+/* ==========================================================================
    Mixins
    ========================================================================== */
 .section_container {
@@ -99,13 +105,13 @@ body {
                 z-index: @zindex-navbar-fixed;
 
                 .container {
-                    background-color: rgb(60, 160, 150, .8);
+                    background-color: @vornberger-background;
                     border-bottom: 1px solid rgb(40, 120, 130);
                 }
             }
 
             .container {
-                background-color: rgba(60, 160, 150, .85);
+                background-color: @vornberger-background;
             }
 
             .navbar-nav {
@@ -114,7 +120,7 @@ body {
                 li {
                     &.active {
                         a {
-                            background: rgba(60, 160, 150, .7) !important;
+                            background: @vornberger-background;
                             color: #fff;
                             font-weight: bold;
                         }
@@ -178,24 +184,33 @@ body {
         #news {
             .container {
                 background: #222;
-                // border-bottom: 1px solid #222;
                 padding-bottom: 2em;
 
                 a.facebook {
                     white-space: nowrap;
-                    background: #d8d8d8;
-                    color: #333;
+                    border-bottom: 2px solid @vornberger-color;
+                    color: #f1f1f1;
                     padding: 0 4px;
+                    transition: all 200ms ease;
+
+                    &:hover {
+                        background: @vornberger-color;
+                        text-decoration: none;
+                    }
                 }
 
                 a.btn.btn-default {
-                    background: rgba(60, 160, 150, 1);
-                    border: rgba(60, 160, 150, 8);
+                    background: @vornberger-background;
+                    border: @vornberger-background;
                     color: #fff;
                     border-radius: 0;
                     padding: 10px 20px;
-
                     margin-top: 2em;
+                    transition: all 200ms ease;
+
+                    &:hover {
+                        background: @vornberger-color;
+                    }
                 }
 
             }
