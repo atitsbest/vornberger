@@ -8,6 +8,9 @@ $(function() {
         var $scroll = $(this),
             pos = $scroll.position();
 
+        // Unveränderte Hintergrund-Positionierung merken.
+        $scroll.data('original-backgroundPosition', $scroll.css('backgroundPosition'));
+
         $(window).scroll(function() {
             if (Modernizr.mq('(min-width: 768px)')) {
                 // HTML5 proves useful for helping with creating JS functions!
@@ -15,7 +18,7 @@ $(function() {
                 var scrollTop = $window.scrollTop(),
                     speed = $scroll.data('speed'),
                     yPos = -(scrollTop-pos.top) / speed,
-                    xPos = $scroll.data('pos-x');
+                    xPos = $scroll.data('pos-x')
 
                 // background position
                 var coords = xPos + ' '+ yPos + 'px';
@@ -24,6 +27,9 @@ $(function() {
 
                 // move the background
                 $scroll.css({ backgroundPosition: coords });
+            }
+            else {
+                $scroll.css({ backgroundPosition: $scroll.data('original-backgroundPosition') });
             }
         }); // end window scroll
     });  // end section function
