@@ -3,6 +3,8 @@ $(function() {
     // cache the window object
     $window = $(window);
 
+    $('.heros img').imagesLoaded();
+
     $('div[data-type="background"]').each(function(){
         // declare the variable to affect the defined data-type
         var $scroll = $(this),
