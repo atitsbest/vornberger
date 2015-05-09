@@ -36,14 +36,28 @@
 
 .forfree {
     font-weight: 100;
-    color: rgba(0,0,0,.5);
-    border: 1px solid rgba(0,0,0,.5);
+    color: #fff;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
     padding: 4px 8px;
     margin-left: 5px;
-    font-size: .62em;
+    font-size: 10px;
     display: inline-block;
     position: relative;
-    top: -4px;
+    top: -14px;
+}
+a.facebook {
+    color: #4C69BA;
+    border-bottom: 2px solid #4C69BA;
+    span {
+        font-size: 18px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background: #4C69BA;
+        color: #fff;
+    }
 }
 
 /* ==========================================================================
@@ -112,14 +126,15 @@ body {
     .wrap {
 
         h2,h3 {
-            font-weight: 100;
+            font-weight: 200;
             font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            text-transform: uppercase;
             padding-left: 20px;
         }
 
         h2 {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: 100;
         }
 
         p {
@@ -188,9 +203,6 @@ body {
                         color: #fff;
                     }
 
-                    &.facebook {
-                        font-size: 20px;
-                    }
                 }
             }
         }
@@ -224,8 +236,19 @@ body {
         }
 
         .brands {
-            img {
-                opacity: .8;
+            text-align: center;
+
+            > .item {
+                margin: 3px;
+                width: 17%;
+                display: inline-block;
+
+                > img {
+                    width: 100%;
+                    opacity: .8;
+                    height: auto;
+                    display: block;
+                }
             }
 
             &.uhren {
@@ -327,6 +350,34 @@ body {
             }
         }
 
+
+        .brillen-bild {
+            height: 150px;
+            width: auto;
+            margin-left: -100px;
+
+            @media (min-width: @screen-sm-min) {
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
+        }
+
+        .sorglospaket {
+            vertical-align: bottom;
+            text-align: left;
+
+            @media (min-width: @screen-sm-min) {
+                h3 {
+                    padding-left: 0;
+                }
+
+                p,h3 {
+                    text-align: center;
+                }
+            }
+        }
+
         #kontaktlinsen {
             .container {
                 // background: #65B5A8;
@@ -351,6 +402,21 @@ body {
 
                     p {
                     }
+                }
+            }
+        }
+
+        .kontaktlinsen {
+            p {
+                text-align: left;
+            }
+            @media (min-width: @screen-sm-min) {
+                p, h2 {
+                    text-align: center;
+                }
+
+                h2 {
+                    padding-left: 0;
                 }
             }
         }
@@ -412,8 +478,20 @@ body {
             }
         }
 
+        .schmuck-uhren-bild {
+            height: 200px;
+            width: auto;
+            margin-left: -120px;
+
+            @media (min-width: @screen-sm-min) {
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
+        }
+
         #anfahrt {
-            min-height: 400px;
+            min-height: 300px;
         }
 
         #kontakt {
@@ -438,6 +516,8 @@ body {
             .container {
                 text-align: center;
 
+
+
                 @media (min-width: @screen-sm-min) {
                     text-align: left;
                 }
@@ -452,6 +532,10 @@ body {
                     color: #d8d8d8;
                 }
 
+                p, h4 {
+                    margin-left: 10px;
+                }
+
                 h4 {
                     font-weight: 100;
                     color: #999;
@@ -462,6 +546,7 @@ body {
                 p {
                     color: #666;
                     line-height: 1.4em;
+                    padding: 0;
 
                     &.sozial {
                         font-size: 32px;

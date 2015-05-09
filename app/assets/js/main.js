@@ -40,17 +40,16 @@ $(function() {
         auto: true
     });
 
-    $(".brands.schmuck").owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        pagination: false,
-        itemScaleUp: true,
-        items : 4,
-        itemsMobile: [479,2],
-        itemsTablet: [768,3],
-        itemsDesktopSmall: [979, 5],
-        itemsDesktop: false
-
-    });
+    // $(".brands.schmuck").owlCarousel({
+    //     autoPlay: 3000, //Set AutoPlay to 3 seconds
+    //     pagination: false,
+    //     itemScaleUp: true,
+    //     items : 5,
+    //     itemsMobile: [479,2],
+    //     itemsTablet: [768,3],
+    //     itemsDesktopSmall: [979, 5],
+    //     itemsDesktop: false
+    // });
 
     google.maps.event.addDomListener(window, 'load', function initialize() {
         var latlng = new google.maps.LatLng(50.001058,12.083484);
