@@ -3,8 +3,8 @@
 /* ==========================================================================
    Variables
    ========================================================================== */
-@vornberger-color: rgb(60, 160, 150);
-@vornberger-background: rgba(60, 160, 150, .85);
+@vornberger-color: rgb(243, 134, 48);
+@vornberger-background: rgba(243, 134, 48, .85);
 
 /* ==========================================================================
    Mixins
@@ -14,10 +14,6 @@
 
     h2 {
         font-size: 48px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin-top: -59px;
         color: #f5f3f2;
         letter-spacing: -0.05em;
         text-align: center;
@@ -29,9 +25,7 @@
 
     @media (min-width: @screen-sm-min) {
         h2 {
-            font-size: 72px;
-            margin-top: -62px;
-            text-align: left;
+            font-size: 48px;
         }
 
         p {
@@ -40,22 +34,72 @@
     }
 }
 
-.forfree(@deg:30deg) {
-    font-weight: 800;
-    color: rgba(60, 160, 150, 0.85);
-    border: 2px solid rgba(60, 160, 150, 0.85);
-    border-radius: 2px;
+.forfree {
+    font-weight: 100;
+    color: rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.5);
     padding: 4px 8px;
     margin-left: 5px;
     font-size: .62em;
     display: inline-block;
     position: relative;
-    top: -16px;
+    top: -4px;
 }
 
 /* ==========================================================================
    Styles
    ========================================================================== */
+@media (min-width: 768px) {
+    .row {
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+
+// .row-full-height {
+//   height: 100%;
+// }
+// .col-full-height {
+//   height: 100%;
+//   vertical-align: middle;
+// }
+// .row-same-height {
+//   display: table;
+//   width: 100%;
+//   /* fix overflow */
+//   table-layout: fixed;
+// }
+// .col-xs-height {
+//   display: table-cell;
+//   float: none !important;
+// }
+//
+// @media (min-width: 768px) {
+//   .col-sm-height {
+//     display: table-cell;
+//     float: none !important;
+//   }
+// }
+// @media (min-width: 992px) {
+//   .col-md-height {
+//     display: table-cell;
+//     float: none !important;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .col-lg-height {
+//     display: table-cell;
+//     float: none !important;
+//   }
+// }
+//
+
 body {
 
 
@@ -63,14 +107,15 @@ body {
 
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
 
     .wrap {
 
         h2,h3 {
-            font-weight: 900;
-            font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 100;
+            font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
+            padding-left: 20px;
         }
 
         h2 {
@@ -78,9 +123,10 @@ body {
         }
 
         p {
-            color: #333;
+            color: #555;
             line-height: 24px;
             font-weight: normal;
+            padding: 15px 20px;
             // font-size: 20px;
 
         }
@@ -150,15 +196,22 @@ body {
         }
 
         .container {
-            background: rgb(245, 243, 242);
+            // background: rgb(245, 243, 242);
         }
 
         section {
             .container {
+                padding-top: 15px;
+                padding-bottom: 60px;
 
                 h2,h3,p {
+                    color: rgba(255,255,255,.8);
                     margin-left: 10px;
                     margin-right: 10px;
+                }
+
+                p {
+                    color: rgba(255,255,255,.7);
                 }
 
                 @media (min-width: @screen-sm-min) {
@@ -168,23 +221,14 @@ body {
                     }
                 }
             }
+        }
 
-            &.invert {
-                .container {
-                    background: #000;
-                    padding-top: 3em;
+        .brands {
+            img {
+                opacity: .8;
+            }
 
-                    h2, h3 {
-                        color: #efefef;
-                        font-weight: 900;
-                        letter-spacing: 0.02em;
-                    }
-
-                    p {
-                        line-height: 24px;
-                        color: #a5a5a5;
-                    }
-                }
+            &.uhren {
             }
         }
 
@@ -195,8 +239,11 @@ body {
 
         #news {
             .container {
-                background: #222;
-                padding-bottom: 2em;
+                // background: #18696C;
+                // border-bottom: 4px solid darken(#18696C, 10%);
+                h3 {
+                    color: #E0E4CC;
+                }
 
                 a.facebook {
                     white-space: nowrap;
@@ -213,14 +260,14 @@ body {
 
                 a.btn.btn-default {
                     background: transparent;
-                    border: 4px solid #d8d8d8;
+                    border: 2px solid #d8d8d8;
                     color: #d8d8d8;
                     border-radius: 0;
                     padding: 10px 10px;
                     margin-top: 2em;
                     transition: all 200ms ease;
                     text-transform: uppercase;
-                    border-radius: 4px;
+                    border-radius: 2px;
 
                     span {
                         padding: 0 1em;
@@ -237,15 +284,15 @@ body {
 
         #brillen {
             .container {
-                padding-bottom: 2em;
+                // background: #3CA096;
+                // border-bottom: 4px solid darken(#3CA096, 10%);
+
                 .section_container;
+                // background: #927863;
 
                 h3 {
                     position: relative;
-
-                    .forfree {
-                        .forfree(30deg);
-                    }
+                    color: #FA6900;
                 }
 
                 p {
@@ -261,9 +308,7 @@ body {
                     position: relative;
 
                     h2 {
-                        color: #f5f3f2;
-                        text-shadow: 1px -1px rgba(0,0,0,.2);
-                        margin-top: -44px;
+                        color: #FA6900;
                     }
 
                     p {
@@ -273,7 +318,6 @@ body {
 
                     @media (min-width: @screen-sm-min) {
                         h2 {
-                            margin-top: -66px;
                         }
                         p {
                             margin-top: 0;
@@ -285,31 +329,27 @@ body {
 
         #kontaktlinsen {
             .container {
-                // border-bottom: 1px solid #222;
-                background: #000 url('../img/kontaktlinsen.png') 100%;
-                background-repeat: no-repeat;
-                padding-top: 0;
+                // background: #65B5A8;
+                // border-bottom: 4px solid darken(#65B5A8, 10%);
 
                 .section_container;
 
                 h2 {
                     letter-spacing: -0.09em;
+                    color: #F38630;
+                }
+                h3 {
+                    color: #F38630;
+                }
+                p {
                 }
 
                 @media (min-width: @screen-sm-min) {
-                    background: #000 url('../img/kontaktlinsen.png') 0 0 fixed;
-                    background-repeat: no-repeat;
                 }
 
                 .row {
-                    // background-color: rgba(50, 150, 250, .5);
-                    padding-top: 3em;
-                    padding-bottom: 3em;
 
                     p {
-                        color: rgba(255,255,255,.7);
-                        background: rgba(0,0,0,.2);
-                        padding: 10px 4px;
                     }
                 }
             }
@@ -317,103 +357,79 @@ body {
 
         #schmuck {
             .container {
-                // border-bottom: 1px solid #222;
-                background: #fff url('../img/schmuck-01a.png') 10% 85%;
-                background-repeat: no-repeat;
-                background-position: left;
-                min-height: 300px;
-                position: relative;
-                padding-top: 0;
+                // background: #A7C42C;
+                // border-bottom: 4px solid darken(#A7C42C, 10%);
 
                 .section_container;
 
                 h2 {
-                    color: #000;
+                    color: #69D2E7;
+                }
+                h3 {
+                    color: #69D2E7;
+                }
+                p {
+                }
+
+                .brands {
+                    img {
+                        opacity: .8;
+                    }
                 }
 
                 @media (min-width: @screen-sm-min) {
-                    background: #fff url('../img/schmuck-01a.png') 0 0 fixed;
+                    // background: #fff url('../img/schmuck-01a.png') 0 0 fixed;
                     background-repeat: no-repeat;
-                }
-
-                .row {
-                    padding-top: 3em;
-                    padding-bottom: 3em;
-
-                    h2 {
-                        padding-left: 0;
-                    }
-
-                    p {
-                        background: rgba(245,245,245,.8);
-                        padding: 10px;
-                    }
                 }
             }
         }
 
         #uhren {
             .container {
-                // border-bottom: 1px solid #222;
-                background: #222 url('../img/uhr-02.png') -50% 35%;
-                background-repeat: no-repeat;
-                padding-top: 0;
+                // background: #8AB821;
+                // border-bottom: 4px solid darken(#8AB821, 10%);
 
                 .section_container;
 
+
                 h2 {
-                    color: #fff;
-                    text-shadow: 1px 1px rgba(0,0,0,.2);
+                    color: #A7DBD8;
                 }
-
-                @media (min-width: @screen-sm-min) {
-                    background: #222 url('../img/uhr-02.png') 75% 0 fixed;
-                    background-repeat: no-repeat;
-
-                    h2 {
-                        margin-top: -63px;
-                    }
+                h3 {
+                    color: #A7DBD8;
                 }
-
-                .row {
-                    padding-top: 3em;
-                    padding-bottom: 3em;
-                    height: 400px;
-
-                    p {
-                        padding-bottom: 3em;
-                        background: rgba(50,50,50,.9);
-                        padding: 10px;
-                    }
+                p {
                 }
 
                 .brands {
-                    > li {
-                        float: left;
+                    img {
+                        opacity: .8;
                     }
+                }
+
+                @media (min-width: @screen-sm-min) {
                 }
             }
         }
 
+        #anfahrt {
+            min-height: 400px;
+        }
+
         #kontakt {
-            .container {
-                border: 1px solid #333;
+            .col-xs-12 {
+                min-height: 400px;
+            }
 
-                .col-xs-12 {
-                    min-height: 300px;
-                }
+            .section_container;
 
-                .section_container;
+            h2 {
+                color: #E0E4CC;
+                opacity: .8;
+            }
 
+            @media (min-width: @screen-sm-min) {
                 h2 {
-                    margin-top: -10px;
-                    color: #222;
-                }
-
-                @media (min-width: @screen-sm-min) {
-                    h2 {
-                        margin-top: -15px;
-                    }
                 }
             }
         }
@@ -429,7 +445,6 @@ body {
                 padding-top: 1em;
                 padding-bottom: 1em;
                 margin-bottom: 2em;
-                background: #222;
                 color: #fff;
                 font-size: 14px;
 
@@ -438,6 +453,7 @@ body {
                 }
 
                 h4 {
+                    font-weight: 100;
                     color: #999;
                     text-transform: uppercase;
                     margin-top: 30px;
@@ -458,7 +474,6 @@ body {
                     margin-bottom: 1em;
 
                     @media (min-width: @screen-sm-min) {
-                        border-right: 1px solid #333;
                     }
 
                     .item {
@@ -466,7 +481,7 @@ body {
 
                         img {
                             opacity: .3;
-                            width: 120px;
+                            width: 60px;
                         }
                     }
                 }
