@@ -557,16 +557,25 @@ body {
 
                 .brands {
                     margin-bottom: 1em;
-
-                    @media (min-width: @screen-sm-min) {
-                    }
+                    text-align: left;
 
                     .item {
                         display: inline-block;
+                        width: 30%;
 
                         img {
-                            opacity: .3;
-                            width: 60px;
+                        }
+                    }
+
+                    @media (min-width: @screen-sm-min) {
+                        .item {
+                            display: inline-block;
+                            width: auto;
+
+                            img {
+                                opacity: .3;
+                                width: 100px;
+                            }
                         }
                     }
                 }
